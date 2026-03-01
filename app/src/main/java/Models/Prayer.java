@@ -7,7 +7,9 @@ package Models;
 public class Prayer {
     private int day;
     private String prayer, takenFrom;
+    private Boolean isPrayed;
 
+    // Constructor
     public Prayer() {}
 
     public int getDay() { return day;}
@@ -30,5 +32,13 @@ public class Prayer {
 
     public void setTakenFrom(String takenFrom) {
         this.takenFrom = takenFrom;
+    }
+
+    public Boolean getIsPrayed() {
+        return isPrayed;
+    }
+
+    public void setIsPrayed(Boolean isPrayed) {
+        this.isPrayed = isPrayed;
     }
 }

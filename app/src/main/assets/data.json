@@ -2,156 +2,187 @@
     {
         "day": 1,
         "prayer": "Thank You Father, that You so loved the world that You gave Your one and only Son, our Lord Jesus Christ. Fairest Lord Jesus! You alone are my heart's desire... my chief delight... my soul's glory, joy and crown. Every advantage life can offer is like rubbish, compared with the overwhelming gain of knowing You.",
-        "takenFrom": "John 3:16; Philippians 3:8"
+        "takenFrom": "John 3:16; Philippians 3:8",
+        "isPrayed": false
     },
     {
         "day": 2,
         "prayer": "I praise You Lord for Your stubborn love and wisdom. You are too wise to ever make a mistake, too loving to ever do anything unkind. My heart rejoices in You, Lord, for You are my strong shelter in times of trouble, danger and stress. You are my hiding place.",
-        "takenFrom": "Psalms 27:5; Psalms 91:1; Psalms 63:7; Matthew 6:25-26"
+        "takenFrom": "Psalms 27:5; Psalms 91:1; Psalms 63:7; Matthew 6:25-26",
+        "isPrayed": false
     },
     {
         "day": 3,
         "prayer": "Thank You Father, that the Lord Jesus Christ demonstrated how I am to live and serve. May You strengthen my heart in every good work and every good word, so that more and more I may honor You by the way I live.",
-        "takenFrom": "Hebrews 4:12; Philippians 1:20"
+        "takenFrom": "Hebrews 4:12; Philippians 1:20",
+        "isPrayed": false
     },
     {
         "day": 4,
         "prayer": "I bow at the feet of Jesus who died for me and is now alive forever and ever. I exalt Him, I yield myself to Him, for He is worthy of the total response of my entire being.",
-        "takenFrom": "Hebrews 8:1; 7:25; Revelation 1:17; 5:12"
+        "takenFrom": "Hebrews 8:1; 7:25; Revelation 1:17; 5:12",
+        "isPrayed": false
     },
     {
         "day": 5,
         "prayer": "O Lord Most High, You rule over the heavens and the earth... yet You are also personally present, personally involved God who loves, rescues and takes care of all who trust You.",
-        "takenFrom": "Hebrews 1:3; Jeremiah 32:27; 10:6-7"
+        "takenFrom": "Hebrews 1:3; Jeremiah 32:27; 10:6-7",
+        "isPrayed": false
     },
     {
         "day": 6,
         "prayer": "I praise You for Your sovereignty over the broad events of my life and over the details. With You, nothing is accidental, nothing is incidental, and no experience is wasted. You hold in Your own power my breath of life and all my destiny.",
-        "takenFrom": "Daniel 5:23; Romans 8:28-29"
+        "takenFrom": "Daniel 5:23; Romans 8:28-29",
+        "isPrayed": false
     },
     {
         "day": 7,
         "prayer": "Thank You Lord for the trials that You allow to happen in my life which serves as a platform on which You reveal Yourself, show Your love and power, both to me and to others looking on. Thank You that I can move into the future nondefensively, with hands outstretched to whatever lies ahead, for You hold the future and You will always be with me, even to my old age... and through all eternity.",
-        "takenFrom": "Isaiah 46:4"
+        "takenFrom": "Isaiah 46:4",
+        "isPrayed": false
     },
     {
         "day": 8,
         "prayer": "Thank You that Your Son will return from heaven with a shout of triumph, that the dead in Christ will be raised imperishable, and in a flash, in the twinkling of an eye, we shall all be utterly changed. Thank You that \"whatever we may have to go through now is less than nothing compared with the magnificent future\" You have planned for us.",
-        "takenFrom": "1 Thessalonians 4:16; 1 Corinthians 15:51-52; Romans 8:18"
+        "takenFrom": "1 Thessalonians 4:16; 1 Corinthians 15:51-52; Romans 8:18",
+        "isPrayed": false
     },
     {
         "day": 9,
         "prayer": "What a privilege it is to store Your Word in my heart to keep me from sinning against You... and to be a storehouse of inspired words that the Spirit can bring to my mind to help others. May Your Word always refresh, nourish me and teach me as I read and meditate it with a listening heart.",
-        "takenFrom": "Psalms 119:11"
+        "takenFrom": "Psalms 119:11",
+        "isPrayed": false
     },
     {
         "day": 10,
         "prayer": "I worship and bow down before You, my Maker for You have wonderfully and uniquely designed my looks, my abilities and my personality. I rejoice that You have gifted me for the special purposes You have in mind for my life. Surely You have been good to me, O Lord!",
-        "takenFrom": "Psalms 95:6; Psalms 139:13-16; Romans 12:3-6"
+        "takenFrom": "Psalms 95:6; Psalms 139:13-16; Romans 12:3-6",
+        "isPrayed": false
     },
     {
         "day": 11,
         "prayer": "Thank You that I can enjoy my strengths and gifts without pride or false modesty as I give You the credit for them, praising You rather than congratulating myself. What do I have that I did not receive from You?... All that I am and all that I have comes from You.",
-        "takenFrom": "John 3:27; 1 Corinthians 4:7; Psalms 115:1"
+        "takenFrom": "John 3:27; 1 Corinthians 4:7; Psalms 115:1",
+        "isPrayed": false
     },
     {
         "day": 12,
         "prayer": "Lord God, I choose to thank You for my weaknesses, my infirmities, my inadequacies (physical, mental, emotional, relational)... for the ways I fall short of what people view as ideal... for my feelings of helplessness and inferiority, and even my pain and distresses. Your grace is sufficient for me, for Your strength is made perfect in my weakness.",
-        "takenFrom": "Hebrews 4:15; 2 Corinthians 12:7-10"
+        "takenFrom": "Hebrews 4:15; 2 Corinthians 12:7-10",
+        "isPrayed": false
     },
     {
         "day": 13,
         "prayer": "My gracious and sovereign God, thank You that You have been with me and carried me from the day of my birth until today. May You bless and use me, as You allow me to go through hard times, through trials that many people go through in this fallen world. How encouraged I am to think that You are working all these things out for blessing!",
-        "takenFrom": "Ps. 139:16; 1 Peter 5:9; Genesis 37"
+        "takenFrom": "Ps. 139:16; 1 Peter 5:9; Genesis 37",
+        "isPrayed": false
     },
     {
         "day": 14,
         "prayer": "I praise You God, that the things that happened in my past, both enjoyable and painful, are raw materials for blessings, both in my life and in the lives of others. I choose to look beyond my past and present troubles in this temporary life - and fix my eyes on the unseen things that will last forever. I praise You for the eternal glory these things are piling up for me as I choose to trust You.",
-        "takenFrom": "1 Thessalonians 5:18"
+        "takenFrom": "1 Thessalonians 5:18",
+        "isPrayed": false
     },
     {
         "day": 15,
         "prayer": "I greatly rejoice in You, Lord; my soul exalts in You; for You have clothed me with the garments of salvation, You have wrapped me with a robe of righteousness and beauty, as a bridegroom dressed for his wedding, as a bride adorned with her jewels. What amazing grace! How wonderful that You ask me to do absolutely nothing to earn Your forgiveness.",
-        "takenFrom": "Isaiah 61:10; Ephesians 2:8-9"
+        "takenFrom": "Isaiah 61:10; Ephesians 2:8-9",
+        "isPrayed": false
     },
     {
         "day": 16,
         "prayer": "Holy Spirit I thank You that You are within me, to strengthen me with power in my inner person... to make Christ real within me and flood my heart with his limitless love... to fill me with Your fullness... to enable me to know in personal experience the things You have so freely bestowed on me in Christ.",
-        "takenFrom": "Romans 8:9-10; Ephesians 3:16-19"
+        "takenFrom": "Romans 8:9-10; Ephesians 3:16-19",
+        "isPrayed": false
     },
     {
         "day": 17,
         "prayer": "Father, I celebrate the fact that I have been crucified with Christ, and that now I am alive with His life... that through my new birth I died out of my old life, and that You resurrected me to a living relationship with You... and so I am dead to sin and alive to You!",
-        "takenFrom": "Galatians 2:20; 6:14"
+        "takenFrom": "Galatians 2:20; 6:14",
+        "isPrayed": false
     },
     {
         "day": 18,
         "prayer": "Thank You Lord for the many ways You use other people to counsel me and help me grow... and yet that Christ Himself is the answer to my hang-ups, the one source who can meet my deepest needs. How I rejoice that He is wonderful in counsel and mighty in power, and that He heals from the inside out.",
-        "takenFrom": "Philippians 1:3"
+        "takenFrom": "Philippians 1:3",
+        "isPrayed": false
     },
     {
         "day": 19,
         "prayer": "Create within me Lord, both the desire and the power to do Your gracious will... and make me a joy to You in new ways. Thank You Holy Spirit for the spirit of wisdom and understanding, the spirit of counsel and strength. I rejoice that You are able to do far more that all I ask or think, according to Your power that is at work within me.",
-        "takenFrom": "Philippians 2:13; Ephesians 3:20"
+        "takenFrom": "Philippians 2:13; Ephesians 3:20",
+        "isPrayed": false
     },
     {
         "day": 20,
         "prayer": "Lord God, today I commit to You my present location and situation. May You guide me throughout this life to just be where You want me to be, as I seek to do Your will. You are my dwelling place and I rest under the shadow of Your wings.",
-        "takenFrom": "Psalms 37:5; Deuteronomy 1:33"
+        "takenFrom": "Psalms 37:5; Deuteronomy 1:33",
+        "isPrayed": false
     },
     {
         "day": 21,
         "prayer": "Sovereign God, I thank You for each disturbing or humbling situation in my life, for each breaking or cleansing process You are allowing, for each problem or hindrance, for each thing that triggers in me anxiety or anger or pain. And I thank You in advance for each disappointment, each demanding duty, each pressure, each interruption that may arise in the coming hours and days.",
-        "takenFrom": "Romans 8:28-29; 1 Peter 1:6-7"
+        "takenFrom": "Romans 8:28-29; 1 Peter 1:6-7",
+        "isPrayed": false
     },
     {
         "day": 22,
         "prayer": "Lord Jesus, today help me to keep my eyes focused on You because You said that my temporary troubles are producing for me an eternal glory that far outweighs them all. May You use these trials to humble me and perfect my faith and produce in me the quality of endurance.",
-        "takenFrom": "2 Corinthians 14:17-18; Deuteronomy 8:16-17"
+        "takenFrom": "2 Corinthians 14:17-18; Deuteronomy 8:16-17",
+        "isPrayed": false
     },
     {
         "day": 23,
         "prayer": "Lord God, thank You for bringing people into my life! Thank You for the many ways You use people to meet my needs, brighten my path, and lighten my load... to enrich my knowledge of You and to counsel or correct or nourish me, building me up in the faith. But most of all, I am glad to have You as my best Friend, my wonderful Counselor, and ever-present help in trouble.",
-        "takenFrom": "Philippians 1:3; Psalms 46:1"
+        "takenFrom": "Philippians 1:3; Psalms 46:1",
+        "isPrayed": false
     },
     {
         "day": 24,
         "prayer": "I thank You Lord for giving us Your Word, the Bible which has priceless promises, great beyond measure - promises that apply to Your work in me, in my love ones, in my situation, in my service, and in the whole world... and not one single word of Your good promises has ever failed. No human problems is impossible for You nor too hard for You!",
-        "takenFrom": "2 Peter 1:4; Jeremiah 32:17,27"
+        "takenFrom": "2 Peter 1:4; Jeremiah 32:17,27",
+        "isPrayed": false
     },
     {
         "day": 25,
         "prayer": "Lord, I want You to break me and make me what You want me to be. I want to be a person that walks before You with a broken spirit and contrite heart. May You give me the grace and strength to receive Your discipline and help me make the changes You want me to make.",
-        "takenFrom": "Psalms 51:17; Psalms 84:11"
+        "takenFrom": "Psalms 51:17; Psalms 84:11",
+        "isPrayed": false
     },
     {
         "day": 26,
         "prayer": "I pray today for the salvation of my unsaved loved ones. Thank you Jesus, that through Your blood, You purchase sons and daughters for You for all people everywhere to repent; You have no desire that any person should spend eternity without You!",
-        "takenFrom": "2 Peter 3:9; 1 John 2:2"
+        "takenFrom": "2 Peter 3:9; 1 John 2:2",
+        "isPrayed": false
     },
     {
         "day": 27,
         "prayer": "Holy Spirit, infuse me today with Your inner strength, so that I will be ready for anything You want me to do. I let You manage me and my day as I joyfully depend on You throughout the day, expecting You to guide, to enlighten, to reprove, to teach, to use and to do in me and with me what You desire.",
-        "takenFrom": "Proverbs 3:5-6; Philippians 4:13"
+        "takenFrom": "Proverbs 3:5-6; Philippians 4:13",
+        "isPrayed": false
     },
     {
         "day": 28,
         "prayer": "Lord, I pray for the people in my life who seem to bring more pain that joy; for I believe You have let our paths cross for important reasons. Thank You that by Your power I can receive them as You receive me just as I am. Thank You for Your Spirit who empowers me, so that I can do them good, delight in You and commit my way to You, resting in You as You unfold Your good purposes in these relationships - in Your time.",
-        "takenFrom": "Romans 8:28-29; Psalms 37:1-7"
+        "takenFrom": "Romans 8:28-29; Psalms 37:1-7",
+        "isPrayed": false
     },
     {
         "day": 29,
         "prayer": "Lord Jesus, I ask for Your cleansing power as I confess each sin You make me aware of today. Show me more deeply any hidden sins, griefs and hurts that I've never poured out before You. Touch me and heal my heart as I acknowledge and face my sins. I praise You for how You use my sins and failures to humble me. Thank You for Your undeserved, unchanging love and total cleansing.",
-        "takenFrom": "1 John 1:9; Romans 5:5; 1 Peter 5:5"
+        "takenFrom": "1 John 1:9; Romans 5:5; 1 Peter 5:5",
+        "isPrayed": false
     },
     {
         "day": 30,
         "prayer": "Dear Lord, You are full of mercy and compassion towards me. You know the way I'm put together; You know my limitations; You understand that I am dust. And I praise You that You are greater than any or all of my failures... that as a Potter You are able to mold and remold me, as I submit to Your wisdom and skill - and blend them into a beautiful design, to the praise of the glory of Your grace.",
-        "takenFrom": "Psalms 103:13-14; Jeremiah 18:3-6"
+        "takenFrom": "Psalms 103:13-14; Jeremiah 18:3-6",
+        "isPrayed": false
     },
     {
         "day": 31,
         "prayer": "Father, I praise You that Jesus is Victor over Satan and all his evil powers - that He triumphed over them through the cross and His resurrection. Thank You that Satan must retreat before the Name of our Lord Jesus Christ and before Your Word, the living and powerful sword of the Spirit, and that in the end he will be cast down into everlasting defeat and shame.",
-        "takenFrom": "Colossians 2:15; Ephesians 6:17; Revelation 20:10"
+        "takenFrom": "Colossians 2:15; Ephesians 6:17; Revelation 20:10",
+        "isPrayed": false
     }
 ]

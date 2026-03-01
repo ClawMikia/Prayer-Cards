@@ -8,7 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.Button;
-import android.widget.LinearLayout;
+// Removed LinearLayout import as it's no longer used for the row reference
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,6 +44,7 @@ public class PrayerAdapter extends RecyclerView.Adapter<PrayerAdapter.MyViewHold
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
+        // Ensure this layout name matches your XML file (e.g., prayer_item_row)
         View view = inflater.inflate(R.layout.prayer_item, parent, false);
 
         return new MyViewHolder(view);
@@ -60,11 +62,15 @@ public class PrayerAdapter extends RecyclerView.Adapter<PrayerAdapter.MyViewHold
 
         // The current day changes the color so that it will be easier to which day should be prayed
         if (prayers.get(index).getDay() == day) {
-            holder.btn_prayer.setBackgroundColor(context.getResources().getColor(R.color.yellow));
-            holder.btn_prayer.setTextColor(context.getResources().getColor(R.color.black));
+            holder.btn_prayer.setTextColor(context.getResources().getColor(R.color.yellow));
         } else {
-            holder.btn_prayer.setBackgroundColor(context.getResources().getColor(R.color.blue));
             holder.btn_prayer.setTextColor(context.getResources().getColor(R.color.white));
+        }
+
+        // FIXED: Added null check for Boolean to prevent NullPointerException
+        // If getIsPrayed() returns null, it will now safely evaluate to false
+        if (prayers.get(index).getIsPrayed() != null && prayers.get(index).getIsPrayed()) {
+            holder.btn_prayer.setTextColor(context.getResources().getColor(R.color.green));
         }
 
         holder.btn_prayer.setText("Day " + prayers.get(index).getDay());
@@ -76,6 +82,8 @@ public class PrayerAdapter extends RecyclerView.Adapter<PrayerAdapter.MyViewHold
                 intent.putExtra("day", prayers.get(index).getDay());
                 intent.putExtra("prayer", prayers.get(index).getPrayer());
                 intent.putExtra("takenFrom", prayers.get(index).getTakenFrom());
+                // ADDED: Pass the isPrayed status so PrayerContent knows whether to hide the button
+                intent.putExtra("isPrayed", prayers.get(index).getIsPrayed());
 
                 context.startActivity(intent);
             }
@@ -84,17 +92,22 @@ public class PrayerAdapter extends RecyclerView.Adapter<PrayerAdapter.MyViewHold
 
     // Get the number of rows in the prayers array
     @Override
-    public int getItemCount() { return prayers.size(); }
+    public int getItemCount() {
+        // Added extra safety for the list itself
+        return prayers != null ? prayers.size() : 0;
+    }
 
     // Blueprints of the row structure
     public class MyViewHolder extends RecyclerView.ViewHolder {
         Button btn_prayer;
-        LinearLayout prayer_item_row;
+        // CHANGED: Changed from LinearLayout to View to prevent ClassCastException
+        View prayer_item_row;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             btn_prayer = itemView.findViewById(R.id.btn_prayer);
+            // findViewByID returns a View, so this will no longer crash
             prayer_item_row = itemView.findViewById(R.id.prayer_item_row);
         }
     }

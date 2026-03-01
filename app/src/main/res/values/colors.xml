@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="blue">#3D01FD</color>
     <color name="yellow">#FFDD37</color>
+    <color name="prayerCardButton">#545454</color>
     <color name="green">#66D166</color>
 </resources>
