@@ -7,6 +7,7 @@ A simple Android application that displays 31 Prayer Cards for your everyday lif
 - **Prayer Status**: Track which prayers you have completed.
 - **Monthly Reset**: Automatically resets prayer status at the beginning of each month.
 - **Search Functionality**: Users can search for specific prayers, sources, or days within the collection.
+- **Progress Restriction**: Prevents skipping ahead by only allowing users to mark prayers as "Done" for the current or past days.
 
 ## New Search Function
 The latest update adds a search bar at the top of the main screen. This allows users to filter the prayer list by:

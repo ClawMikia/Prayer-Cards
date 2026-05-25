@@ -23,6 +23,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
+
 import Models.Prayer;
 
 /*
@@ -76,8 +80,13 @@ public class PrayerContent extends AppCompatActivity {
 
         btn_done = findViewById(R.id.btn_done);
 
-        // This will now work because prayer.getIsPrayed() is populated from the Intent
-        if(prayer.getIsPrayed() != null && prayer.getIsPrayed()) {
+        // Get current day of the month
+        Date date = new Date();
+        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        int today = localDate.getDayOfMonth();
+
+        // Hide "Done Praying" button if already prayed OR if it's a future day
+        if ((prayer.getIsPrayed() != null && prayer.getIsPrayed()) || prayer.getDay() > today) {
             btn_done.setVisibility(View.GONE);
         }
 
