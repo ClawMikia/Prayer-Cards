@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.WindowInsetsController;
 import android.widget.Button;
 import android.widget.TextView;
+import androidx.appcompat.widget.SearchView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Prayer> prayers;
     // Added TextView reference for unprayed count
     private TextView txt_unprayed_count;
+    private SearchView searchView;
 
     private static final String FILE_NAME = "data.json";
     private static final String PREFS_NAME = "PrayerPrefs";
@@ -76,6 +78,20 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
+        searchView = findViewById(R.id.searchView);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.filter(newText);
+                return true;
+            }
+        });
+
         btn_about = findViewById(R.id.btn_about);
         btn_about.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +109,11 @@ public class MainActivity extends AppCompatActivity {
         prayers.clear();
         loadJsonPrayers();
         if (adapter != null) {
-            adapter.notifyDataSetChanged();
+            adapter.updateList(prayers);
+            // Re-apply filter if searchView has text
+            if (searchView != null && !searchView.getQuery().toString().isEmpty()) {
+                adapter.filter(searchView.getQuery().toString());
+            }
         }
     }
 

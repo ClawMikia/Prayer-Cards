@@ -32,11 +32,32 @@ import Models.Prayer;
 public class PrayerAdapter extends RecyclerView.Adapter<PrayerAdapter.MyViewHolder> {
     private Context context;
     private ArrayList<Prayer> prayers;
+    private ArrayList<Prayer> prayersFull;
 
     // Use this constructor to create an instance of PrayerAdapter
     public PrayerAdapter(Context context, ArrayList<Prayer> prayers) {
         this.context = context;
         this.prayers = prayers;
+        this.prayersFull = new ArrayList<>(prayers);
+    }
+
+    public void updateList(ArrayList<Prayer> newList) {
+        this.prayers = newList;
+        this.prayersFull = new ArrayList<>(newList);
+        notifyDataSetChanged();
+    }
+
+    public void filter(String text) {
+        ArrayList<Prayer> filteredList = new ArrayList<>();
+        for (Prayer item : prayersFull) {
+            if (item.getPrayer().toLowerCase().contains(text.toLowerCase()) || 
+                item.getTakenFrom().toLowerCase().contains(text.toLowerCase()) ||
+                String.valueOf(item.getDay()).contains(text)) {
+                filteredList.add(item);
+            }
+        }
+        prayers = filteredList;
+        notifyDataSetChanged();
     }
 
     // Create a row of button
