@@ -34,8 +34,6 @@ import Models.Prayer;
  */
 
 public class PrayerContent extends AppCompatActivity {
-    private TextView txt_day, txt_prayer, txt_taken_from;
-    private Button btn_back, btn_done;
     private Prayer prayer;
     private static final String FILE_NAME = "data.json";
 
@@ -54,9 +52,9 @@ public class PrayerContent extends AppCompatActivity {
             }
         }
 
-        txt_day = findViewById(R.id.txt_day);
-        txt_prayer = findViewById(R.id.txt_prayer);
-        txt_taken_from = findViewById(R.id.txt_taken_from);
+        TextView txt_day = findViewById(R.id.txt_day);
+        TextView txt_prayer = findViewById(R.id.txt_prayer);
+        TextView txt_taken_from = findViewById(R.id.txt_taken_from);
 
         Intent prayerIntent = getIntent();
         prayer = new Prayer();
@@ -66,19 +64,14 @@ public class PrayerContent extends AppCompatActivity {
         // FIXED: Retrieve the isPrayed boolean from the Intent
         prayer.setIsPrayed(prayerIntent.getBooleanExtra("isPrayed", false));
 
-        txt_day.setText("Day " + prayer.getDay());
+        txt_day.setText(getResources().getString(R.string.day_label, prayer.getDay()));
         txt_prayer.setText(prayer.getPrayer());
         txt_taken_from.setText(prayer.getTakenFrom());
 
-        btn_back = findViewById(R.id.btn_back);
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        Button btn_back = findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(v -> finish());
 
-        btn_done = findViewById(R.id.btn_done);
+        Button btn_done = findViewById(R.id.btn_done);
 
         // Get current day of the month
         Date date = new Date();
@@ -90,13 +83,10 @@ public class PrayerContent extends AppCompatActivity {
             btn_done.setVisibility(View.GONE);
         }
 
-        btn_done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Update the JSON file in internal storage before finishing
-                updateJsonFile(prayer.getDay());
-                finish();
-            }
+        btn_done.setOnClickListener(v -> {
+            // Update the JSON file in internal storage before finishing
+            updateJsonFile(prayer.getDay());
+            finish();
         });
     }
 

@@ -2,4 +2,6 @@
     <string name="app_name">Prayer Cards</string>
     <string name="about_prayer_cards">This pack contains 31 cards of focused prayers for your everyday life each day of the month. Its purpose is to inspire and motivate you to unceasing prayers wherever you are - in your home, car, office and places you mostly spend your time. Each prayer indicates a Scripture Text to encourage you to pray according to His Word and His will. Jesus Promised.</string>
     <string name="jesus_quote">"But if you stay joined to Me and My words remain in you, you may ask any request you like and it will be granted." John 15:7 (NLT)</string>
+    <string name="remaining_prayers">Remaining Prayers: %1$d</string>
+    <string name="day_label">Day %1$d</string>
 </resources>

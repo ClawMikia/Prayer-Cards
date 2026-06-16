@@ -1,27 +1,42 @@
+# Built artifacts
 *.iml
-.gradle
-/local.properties
-/.idea/
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
-
-# Android Studio / IntelliJ
-*.ipr
-*.iws
+*.apk
+*.aar
+*.ap_
+*.dex
+*.class
+bin/
+gen/
 out/
 
-# Gradle
+# Gradle files
+.gradle/
+build/
 .gradletasknamecache
+local.properties
+
+# IDE files
+.idea/
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.externalNativeBuild/
+.cxx/
+captures/
+.navigation/
+
+# OS specific files
+.DS_Store
+Thumbs.db
 
 # Log files
 *.log
 
+# Backup files
+*.bak
+*~
+
 # Generated files
-.project
-.classpath
-.settings/
-bin/
+/app/build/

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.view.WindowInsetsController;
 import android.widget.Button;
 
@@ -13,7 +12,6 @@ import android.widget.Button;
 */
 
 public class AboutPage extends AppCompatActivity {
-    private Button btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +30,7 @@ public class AboutPage extends AppCompatActivity {
             }
         }
 
-        btn_back = findViewById(R.id.btn_back);
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        Button btn_back = findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(v -> finish());
     }
 }

@@ -8,8 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.Button;
-// Removed LinearLayout import as it's no longer used for the row reference
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,7 +28,7 @@ import Models.Prayer;
 * */
 
 public class PrayerAdapter extends RecyclerView.Adapter<PrayerAdapter.MyViewHolder> {
-    private Context context;
+    private final Context context;
     private ArrayList<Prayer> prayers;
     private ArrayList<Prayer> prayersFull;
 
@@ -73,16 +71,14 @@ public class PrayerAdapter extends RecyclerView.Adapter<PrayerAdapter.MyViewHold
 
     // Put every prayer to every row
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-        int index = position;
-
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         // This gets the day / date from the datetime
         Date date = new Date();
         LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         int day = localDate.getDayOfMonth();
 
         // The current day changes the color so that it will be easier to which day should be prayed
-        if (prayers.get(index).getDay() == day) {
+        if (prayers.get(position).getDay() == day) {
             holder.btn_prayer.setTextColor(context.getResources().getColor(R.color.yellow));
         } else {
             holder.btn_prayer.setTextColor(context.getResources().getColor(R.color.white));
@@ -90,24 +86,21 @@ public class PrayerAdapter extends RecyclerView.Adapter<PrayerAdapter.MyViewHold
 
         // FIXED: Added null check for Boolean to prevent NullPointerException
         // If getIsPrayed() returns null, it will now safely evaluate to false
-        if (prayers.get(index).getIsPrayed() != null && prayers.get(index).getIsPrayed()) {
+        if (prayers.get(position).getIsPrayed() != null && prayers.get(position).getIsPrayed()) {
             holder.btn_prayer.setTextColor(context.getResources().getColor(R.color.green));
         }
 
-        holder.btn_prayer.setText("Day " + prayers.get(index).getDay());
-        holder.btn_prayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, PrayerContent.class);
+        holder.btn_prayer.setText(context.getResources().getString(R.string.day_label, prayers.get(position).getDay()));
+        holder.btn_prayer.setOnClickListener(v -> {
+            Intent intent = new Intent(context, PrayerContent.class);
 
-                intent.putExtra("day", prayers.get(index).getDay());
-                intent.putExtra("prayer", prayers.get(index).getPrayer());
-                intent.putExtra("takenFrom", prayers.get(index).getTakenFrom());
-                // ADDED: Pass the isPrayed status so PrayerContent knows whether to hide the button
-                intent.putExtra("isPrayed", prayers.get(index).getIsPrayed());
+            intent.putExtra("day", prayers.get(position).getDay());
+            intent.putExtra("prayer", prayers.get(position).getPrayer());
+            intent.putExtra("takenFrom", prayers.get(position).getTakenFrom());
+            // ADDED: Pass the isPrayed status so PrayerContent knows whether to hide the button
+            intent.putExtra("isPrayed", prayers.get(position).getIsPrayed());
 
-                context.startActivity(intent);
-            }
+            context.startActivity(intent);
         });
     }
 
@@ -119,17 +112,12 @@ public class PrayerAdapter extends RecyclerView.Adapter<PrayerAdapter.MyViewHold
     }
 
     // Blueprints of the row structure
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
         Button btn_prayer;
-        // CHANGED: Changed from LinearLayout to View to prevent ClassCastException
-        View prayer_item_row;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
             btn_prayer = itemView.findViewById(R.id.btn_prayer);
-            // findViewByID returns a View, so this will no longer crash
-            prayer_item_row = itemView.findViewById(R.id.prayer_item_row);
         }
     }
 }

@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.view.WindowInsetsController;
 import android.widget.Button;
 import android.widget.TextView;
@@ -36,8 +35,6 @@ import Models.Prayer;
 */
 
 public class MainActivity extends AppCompatActivity {
-    private Button btn_about;
-    private RecyclerView recyclerView;
     private PrayerAdapter adapter;
     private ArrayList<Prayer> prayers;
     // Added TextView reference for unprayed count
@@ -68,13 +65,11 @@ public class MainActivity extends AppCompatActivity {
         // Initialize the count TextView
         txt_unprayed_count = findViewById(R.id.txt_unprayed_count);
 
-        prayers = new ArrayList<Prayer>();
-
-        loadJsonPrayers(); // Get all the prayers for display
+        prayers = new ArrayList<>();
 
         adapter = new PrayerAdapter(MainActivity.this, prayers); // Display all prayers
 
-        recyclerView = findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
@@ -92,13 +87,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_about = findViewById(R.id.btn_about);
-        btn_about.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AboutPage.class);
-                startActivity(intent);
-            }
+        Button btn_about = findViewById(R.id.btn_about);
+        btn_about.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AboutPage.class);
+            startActivity(intent);
         });
     }
 
@@ -177,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             // Update the TextView on the screen
-            txt_unprayed_count.setText("Remaining Prayers: " + unprayedCount);
+            txt_unprayed_count.setText(getResources().getString(R.string.remaining_prayers, unprayedCount));
 
         } catch (Exception e) {
             e.printStackTrace();

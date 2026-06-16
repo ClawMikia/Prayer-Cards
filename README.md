@@ -1,23 +1,31 @@
 # Prayer Cards
 
-A simple Android application that displays 31 Prayer Cards for your everyday life.
+A focused daily prayer application for Android that provides inspiration and motivation through 31 unique prayer cards, one for each day of the month.
 
-## Features
-- **Daily Prayers**: 31 unique prayers for each day of the month.
-- **Prayer Status**: Track which prayers you have completed.
-- **Monthly Reset**: Automatically resets prayer status at the beginning of each month.
-- **Search Functionality**: Users can search for specific prayers, sources, or days within the collection.
-- **Progress Restriction**: Prevents skipping ahead by only allowing users to mark prayers as "Done" for the current or past days.
+## Key Features
 
-## New Search Function
-The latest update adds a search bar at the top of the main screen. This allows users to filter the prayer list by:
-- Prayer content
-- Source (Taken from)
-- Day number
+- **Daily Focused Prayer**: 31 unique prayers designed to inspire unceasing prayer in your daily life.
+- **Scripture-Based**: Each prayer includes a Scripture Text to encourage praying according to God's Word.
+- **Progress Tracking**: 
+    - Mark prayers as "Done" to track your monthly progress.
+    - Prayers are color-coded: Green for completed, Yellow for today, White for others.
+- **Search Capability**: Easily find prayers by content, source, or day number.
+- **Monthly Auto-Reset**: Your progress automatically resets at the beginning of each month.
+- **Smart Restrictions**: The "Done Praying" button only appears for the current day or past days, preventing skipping ahead.
 
-Simply type your query into the search bar, and the list will update in real-time.
+## Technical Highlights
 
-## Technical Details
-- Built with Java and Android SDK.
-- Uses `RecyclerView` with a custom adapter.
-- Data is stored in a JSON file (`data.json`) and persisted in internal storage after modifications.
+- **Modern UI**: Built with Material Design 3 and ConstraintLayout for a responsive experience.
+- **Data Persistence**: Uses internal storage to persist prayer status across app restarts.
+- **Efficient Filtering**: Real-time search implemented with a filtered `RecyclerView` adapter.
+- **Java/Android SDK**: Developed using standard Android practices with a focus on reliability and simplicity.
+
+## Getting Started
+
+1. Clone the repository.
+2. Open the project in Android Studio (Hedgehog or newer recommended).
+3. Build and run on an Android device or emulator (API 26+).
+
+## License
+
+This project is for personal and spiritual growth. Feel free to adapt it for your own use.
