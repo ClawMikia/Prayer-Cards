@@ -3,14 +3,14 @@ plugins {
 }
 
 android {
-    namespace = "com.example.prayercards"
-    compileSdk = 34
+    namespace = "com.christopher.prayercards"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.prayercards"
+        applicationId = "com.christopher.prayercards"
         minSdk = 26
-        targetSdk = 34
-        versionCode = 1
+        targetSdk = 35
+        versionCode = 2
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

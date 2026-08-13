@@ -12,8 +12,8 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.prayercards.PrayerContent;
-import com.example.prayercards.R;
+import com.christopher.prayercards.PrayerContent;
+import com.christopher.prayercards.R;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
